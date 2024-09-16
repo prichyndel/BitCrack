@@ -2,6 +2,8 @@ NAME=CudaKeySearchDevice
 CPPSRC:=$(wildcard *.cpp)
 CUSRC:=$(wildcard *.cu)
 
+NVCCFLAGS=-gencode arch=compute_89,code=sm_89  # Updated for RTX 4090
+
 all:	cuda
 
 cuda:
